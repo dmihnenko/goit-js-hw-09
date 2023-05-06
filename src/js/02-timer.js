@@ -19,6 +19,7 @@ const options = {
       startButtonRef.disabled = false;
       startButtonRef.addEventListener('click', () => {
         timerId = setInterval(onInterval, 1000);
+        startButtonRef.disabled = true;
       });
       function onInterval() {
         const objectTime = convertMs(
