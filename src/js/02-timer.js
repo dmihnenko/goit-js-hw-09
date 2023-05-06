@@ -49,7 +49,7 @@ flatpickr('input#datetime-picker', options);
 function convertMs(ms) {
   // Number of milliseconds per unit of time
   const second = 1000;
-  const minute = second * 1000;
+  const minute = second * 60;
   const hour = minute * 60;
   const day = hour * 24;
 
