@@ -9,7 +9,7 @@ const minutesSpanRef = document.querySelector('[data-minutes]');
 const secondsSpanRef = document.querySelector('[data-seconds]');
 const inputDataTime = document.querySelector('#datetime-picker')
 startButtonRef.disabled = true;
-let timerId;
+let timerId = 0;
 const options = {
   enableTime: true,
   time_24hr: true,
