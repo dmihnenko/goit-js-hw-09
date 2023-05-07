@@ -40,6 +40,7 @@ const options = {
         if (Date.parse(selectedDates[0]) - Date.parse(new Date()) === 0) {
           clearInterval(timerId);
           inputDataTime.disabled = false;
+          startButtonRef.disabled = true;
           Notiflix.Notify.success('Time has passed!');
         }
       }
