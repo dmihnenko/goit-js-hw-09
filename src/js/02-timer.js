@@ -9,7 +9,7 @@ const minutesSpanRef = document.querySelector('[data-minutes]');
 const secondsSpanRef = document.querySelector('[data-seconds]');
 const inputDataTime = document.querySelector('#datetime-picker')
 startButtonRef.disabled = true;
-let timerId;
+let timerId = null;
 const options = {
   enableTime: true,
   time_24hr: true,
@@ -39,13 +39,13 @@ const options = {
         );
         if (Date.parse(selectedDates[0]) - Date.parse(new Date()) === 0) {
           clearInterval(timerId);
-
+          timerId = null;
           inputDataTime.disabled = false;
           startButtonRef.disabled = true;
           Notiflix.Notify.success('Time has passed!');
           
-         return timerId = 0;
-          
+       
+          return;
         }
       }
     } else {
