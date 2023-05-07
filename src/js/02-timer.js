@@ -37,15 +37,15 @@ const options = {
           2,
           '0'
         );
-        if (Date.parse(selectedDates[0]) - Date.parse(new Date()) === 0) {
+        if (Date.parse(selectedDates[0]) - Date.parse(new Date()) <= 0) {
           clearInterval(timerId);
-          timerId = null;
+          
           inputDataTime.disabled = false;
           startButtonRef.disabled = true;
           Notiflix.Notify.success('Time has passed!');
           
-       
-          return;
+      
+        
         }
       }
     } else {
@@ -54,6 +54,9 @@ const options = {
     }
   },
 };
+
+
+
 flatpickr('input#datetime-picker', options);
 function convertMs(ms) {
   // Number of milliseconds per unit of time
