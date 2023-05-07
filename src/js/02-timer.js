@@ -43,9 +43,9 @@ const options = {
           inputDataTime.disabled = false;
           startButtonRef.disabled = true;
           Notiflix.Notify.success('Time has passed!');
-          
-      
-        
+          timerId = null;
+
+          return;
         }
       }
     } else {
