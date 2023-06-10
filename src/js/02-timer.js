@@ -46,7 +46,7 @@ const options = {
           Notiflix.Notify.success('Time has passed!');
           timerId = null;
           
-          reload()
+          options.defaultDate = new Date();
           return;
         }
       }
