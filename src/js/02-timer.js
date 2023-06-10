@@ -45,7 +45,7 @@ const options = {
           startButtonRef.disabled = true;
           Notiflix.Notify.success('Time has passed!');
           timerId = null;
-          Date.parse(new Date())
+          
 
           return;
         }
