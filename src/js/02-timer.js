@@ -38,7 +38,7 @@ const options = {
           2,
           '0'
         );
-        if (Date.parse(selectedDates[0]) - Date.parse(new Date()) <= 0) {
+        if (Date.parse(selectedDates[0]) - Date.parse(new Date()) === 0) {
           clearInterval(timerId);
           
           inputDataTime.disabled = false;
@@ -46,8 +46,8 @@ const options = {
           Notiflix.Notify.success('Time has passed!');
           timerId = null;
           
-          options.defaultDate = new Date();
-          return;
+          
+         
         }
       }
     } else {
