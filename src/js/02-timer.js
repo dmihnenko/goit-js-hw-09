@@ -46,6 +46,7 @@ const options = {
           Notiflix.Notify.success('Time has passed!');
           timerId = null;
           
+          return;
           
          
         }
