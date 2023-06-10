@@ -15,6 +15,7 @@ const options = {
   time_24hr: true,
   defaultDate: new Date(),
   minuteIncrement: 1,
+
   onClose(selectedDates) {
     if (Date.parse(new Date()) < Date.parse(selectedDates[0])) {
       startButtonRef.disabled = false;
@@ -44,6 +45,7 @@ const options = {
           startButtonRef.disabled = true;
           Notiflix.Notify.success('Time has passed!');
           timerId = null;
+          Date.parse(new Date())
 
           return;
         }
